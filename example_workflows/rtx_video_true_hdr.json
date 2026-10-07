@@ -50,9 +50,7 @@
         {
           "name": "bit_depth",
           "type": "COMBO",
-          "links": [
-            16
-          ]
+          "links": []
         },
         {
           "name": "color_space",
@@ -159,15 +157,6 @@
             "name": "fps"
           },
           "link": 9
-        },
-        {
-          "name": "bit_depth",
-          "shape": 7,
-          "type": "COMBO",
-          "widget": {
-            "name": "bit_depth"
-          },
-          "link": 16
         }
       ],
       "outputs": [
@@ -241,11 +230,11 @@
         "secondTabWidth": 65
       },
       "widgets_values": [
-        "dangerous_michael_jackson.mp4",
+        "example.mp4",
         "image"
       ],
       "widgets_values_named": {
-        "file": "dangerous_michael_jackson.mp4",
+        "file": "example.mp4",
         "upload": "image"
       }
     },
@@ -400,14 +389,6 @@
       12,
       0,
       "IMAGE"
-    ],
-    [
-      16,
-      7,
-      3,
-      8,
-      3,
-      "COMBO"
     ]
   ],
   "groups": [],
@@ -417,8 +398,8 @@
     "ds": {
       "scale": 0.9846153846153847,
       "offset": [
-        2126.354146003723,
-        1010.5468904972076
+        2125.6771659851074,
+        1120.5468440055847
       ]
     },
     "frontendVersion": "1.53.10",
