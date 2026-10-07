@@ -1,12 +1,12 @@
-# NVIDIA RTX Nodes for ComfyUI
+# ComfyUI Nvidia VFX Nodes
 
-CUDA-accelerated ComfyUI nodes powered by the NVIDIA Video Effects (VFX) SDK and its `nvidia-vfx` Python bindings.
+ComfyUI nodes for VFX professionals. This extension provides GPU-accelerated nodes powered by Nvidia RTX technology and its `nvidia-vfx` Python bindings.
 
-This extension provides:
+Including:
 
-- **RTX Video Super Resolution** — upscale, denoise, deblur, or enhance images and video frames.
-- **RTX TrueHDR** — convert SDR images to normalized BT.2020/PQ or BT.2020/HLG HDR image data.
-- **RTX Video Frame Generation** — interpolate frames between adjacent images for frame-rate conversion or slow motion.
+- **RTX Video Super Resolution**: upscale, denoise, deblur, or enhance images and video frames.
+- **RTX TrueHDR**: convert SDR images to normalized BT.2020/PQ or BT.2020/HLG HDR image data.
+- **RTX Video Frame Generation**: interpolate frames between adjacent images for frame-rate conversion or slow motion.
 
 ## Requirements
 
@@ -20,7 +20,7 @@ The nodes use the CUDA device selected by ComfyUI. CPU-only execution and non-NV
 ### ComfyUI Manager
 
 1. Open **ComfyUI Manager**.
-2. Search for **ComfyUI_NVIDIA_RTX_Nodes**.
+2. Search for **ComfyUI Nvidia VFX Nodes**.
 3. Install the extension and restart ComfyUI.
 
 ### Manual installation
