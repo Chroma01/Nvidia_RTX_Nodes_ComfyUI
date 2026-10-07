@@ -230,11 +230,11 @@
         "secondTabWidth": 65
       },
       "widgets_values": [
-        "input.mp4",
+        "example.mp4",
         "image"
       ],
       "widgets_values_named": {
-        "file": "input.mp4",
+        "file": "example.mp4",
         "upload": "image"
       }
     },

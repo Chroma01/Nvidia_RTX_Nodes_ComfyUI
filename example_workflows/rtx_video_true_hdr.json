@@ -241,11 +241,11 @@
         "secondTabWidth": 65
       },
       "widgets_values": [
-        "dangerous_michael_jackson.mp4",
+        "example.mp4",
         "image"
       ],
       "widgets_values_named": {
-        "file": "dangerous_michael_jackson.mp4",
+        "file": "example.mp4",
         "upload": "image"
       }
     },
