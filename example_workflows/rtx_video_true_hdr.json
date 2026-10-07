@@ -1,8 +1,8 @@
 {
   "id": "e6b92a63-6d7e-4d2b-b9e3-2e054825db02",
   "revision": 0,
-  "last_node_id": 9,
-  "last_link_id": 10,
+  "last_node_id": 12,
+  "last_link_id": 15,
   "nodes": [
     {
       "id": 7,
@@ -30,7 +30,7 @@
           "name": "images",
           "type": "IMAGE",
           "links": [
-            6
+            13
           ]
         },
         {
@@ -72,67 +72,10 @@
       }
     },
     {
-      "id": 1,
-      "type": "RTXVideoSuperResolution",
-      "pos": [
-        -1100,
-        -680
-      ],
-      "size": [
-        285.8072916666667,
-        154
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 6
-        }
-      ],
-      "outputs": [
-        {
-          "name": "upscaled_images",
-          "type": "IMAGE",
-          "links": [
-            7
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "RTXVideoSuperResolution",
-        "cnr_id": "comfyui_nvidia_rtx_nodes",
-        "ver": "0.1.0",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        "scale by multiplier",
-        2,
-        "ULTRA",
-        1,
-        "8-bit RGB"
-      ],
-      "widgets_values_named": {
-        "resize_type": "scale by multiplier",
-        "resize_type.scale": 2,
-        "quality": "ULTRA",
-        "strength": 1,
-        "image_encoding": "8-bit RGB"
-      }
-    },
-    {
       "id": 9,
       "type": "SaveVideo",
       "pos": [
-        -460,
+        -430,
         -680
       ],
       "size": [
@@ -140,7 +83,7 @@
         520
       ],
       "flags": {},
-      "order": 4,
+      "order": 5,
       "mode": 0,
       "inputs": [
         {
@@ -185,7 +128,7 @@
       "id": 8,
       "type": "CreateVideo",
       "pos": [
-        -770,
+        -750,
         -680
       ],
       "size": [
@@ -199,7 +142,7 @@
         {
           "name": "images",
           "type": "IMAGE",
-          "link": 7
+          "link": 14
         },
         {
           "name": "audio",
@@ -287,12 +230,106 @@
         "secondTabWidth": 65
       },
       "widgets_values": [
-        "input.mp4",
+        "IkxCORHGJxLXORejeew86_minimax-h3.mp4",
         "image"
       ],
       "widgets_values_named": {
-        "file": "input.mp4",
+        "file": "IkxCORHGJxLXORejeew86_minimax-h3.mp4",
         "upload": "image"
+      }
+    },
+    {
+      "id": 11,
+      "type": "RTXTrueHDR",
+      "pos": [
+        -1070,
+        -680
+      ],
+      "size": [
+        270,
+        178
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "hdr_images",
+          "type": "IMAGE",
+          "links": [
+            14,
+            15
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RTXTrueHDR"
+      },
+      "widgets_values": [
+        100,
+        100,
+        50,
+        650,
+        true,
+        "HDR"
+      ],
+      "widgets_values_named": {
+        "contrast": 100,
+        "saturation": 100,
+        "middle_gray": 50,
+        "luminance": 650,
+        "debanding": true,
+        "output_colorspace": "HDR"
+      }
+    },
+    {
+      "id": 12,
+      "type": "SaveImageAdvanced",
+      "pos": [
+        -430,
+        -70
+      ],
+      "size": [
+        270,
+        130
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "showAdvanced": true,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 15
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI",
+        "exr",
+        "16-bit float",
+        "HDR"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "ComfyUI",
+        "format": "exr",
+        "format.bit_depth": "16-bit float",
+        "format.input_color_space": "HDR"
       }
     }
   ],
@@ -304,14 +341,6 @@
       7,
       0,
       "VIDEO"
-    ],
-    [
-      7,
-      1,
-      0,
-      8,
-      0,
-      "IMAGE"
     ],
     [
       8,
@@ -330,10 +359,18 @@
       "FLOAT"
     ],
     [
-      6,
+      13,
       7,
       0,
-      1,
+      11,
+      0,
+      "IMAGE"
+    ],
+    [
+      14,
+      11,
+      0,
+      8,
       0,
       "IMAGE"
     ],
@@ -344,6 +381,14 @@
       9,
       0,
       "VIDEO"
+    ],
+    [
+      15,
+      11,
+      0,
+      12,
+      0,
+      "IMAGE"
     ]
   ],
   "groups": [],
@@ -351,13 +396,13 @@
   "extra": {
     "workflowRendererVersion": "LG",
     "ds": {
-      "scale": 0.8526983761385988,
+      "scale": 0.9846153846153847,
       "offset": [
-        2198.136247691975,
-        1166.950213406463
+        2125,
+        1013.0859375
       ]
     },
-    "frontendVersion": "1.53.6",
+    "frontendVersion": "1.53.10",
     "VHS_latentpreview": false,
     "VHS_latentpreviewrate": 0,
     "VHS_MetadataImage": true,
