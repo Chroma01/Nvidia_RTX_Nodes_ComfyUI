@@ -1,8 +1,8 @@
 {
   "id": "e6b92a63-6d7e-4d2b-b9e3-2e054825db02",
   "revision": 0,
-  "last_node_id": 9,
-  "last_link_id": 10,
+  "last_node_id": 10,
+  "last_link_id": 12,
   "nodes": [
     {
       "id": 7,
@@ -30,7 +30,7 @@
           "name": "images",
           "type": "IMAGE",
           "links": [
-            6
+            11
           ]
         },
         {
@@ -72,67 +72,10 @@
       }
     },
     {
-      "id": 1,
-      "type": "RTXVideoSuperResolution",
-      "pos": [
-        -1100,
-        -680
-      ],
-      "size": [
-        285.8072916666667,
-        154
-      ],
-      "flags": {},
-      "order": 2,
-      "mode": 0,
-      "inputs": [
-        {
-          "name": "images",
-          "type": "IMAGE",
-          "link": 6
-        }
-      ],
-      "outputs": [
-        {
-          "name": "upscaled_images",
-          "type": "IMAGE",
-          "links": [
-            7
-          ]
-        }
-      ],
-      "properties": {
-        "Node name for S&R": "RTXVideoSuperResolution",
-        "cnr_id": "comfyui_nvidia_rtx_nodes",
-        "ver": "0.1.0",
-        "enableTabs": false,
-        "tabWidth": 65,
-        "tabXOffset": 10,
-        "hasSecondTab": false,
-        "secondTabText": "Send Back",
-        "secondTabOffset": 80,
-        "secondTabWidth": 65
-      },
-      "widgets_values": [
-        "scale by multiplier",
-        2,
-        "ULTRA",
-        1,
-        "8-bit RGB"
-      ],
-      "widgets_values_named": {
-        "resize_type": "scale by multiplier",
-        "resize_type.scale": 2,
-        "quality": "ULTRA",
-        "strength": 1,
-        "image_encoding": "8-bit RGB"
-      }
-    },
-    {
       "id": 9,
       "type": "SaveVideo",
       "pos": [
-        -460,
+        -370,
         -680
       ],
       "size": [
@@ -185,7 +128,7 @@
       "id": 8,
       "type": "CreateVideo",
       "pos": [
-        -770,
+        -690,
         -680
       ],
       "size": [
@@ -199,7 +142,7 @@
         {
           "name": "images",
           "type": "IMAGE",
-          "link": 7
+          "link": 12
         },
         {
           "name": "audio",
@@ -294,6 +237,56 @@
         "file": "input.mp4",
         "upload": "image"
       }
+    },
+    {
+      "id": 10,
+      "type": "RTXVideoFrameGeneration",
+      "pos": [
+        -1090,
+        -680
+      ],
+      "size": [
+        356,
+        178
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "interpolated_images",
+          "type": "IMAGE",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RTXVideoFrameGeneration"
+      },
+      "widgets_values": [
+        "frame rate multiplier",
+        2,
+        "MEDIUM",
+        true,
+        false,
+        "8-bit RGB"
+      ],
+      "widgets_values_named": {
+        "generation_type": "frame rate multiplier",
+        "generation_type.multiplier": 2,
+        "mode": "MEDIUM",
+        "automatic_shot_change_detection": true,
+        "shot_change": false,
+        "image_encoding": "8-bit RGB"
+      }
     }
   ],
   "links": [
@@ -304,14 +297,6 @@
       7,
       0,
       "VIDEO"
-    ],
-    [
-      7,
-      1,
-      0,
-      8,
-      0,
-      "IMAGE"
     ],
     [
       8,
@@ -330,20 +315,28 @@
       "FLOAT"
     ],
     [
-      6,
-      7,
-      0,
-      1,
-      0,
-      "IMAGE"
-    ],
-    [
       10,
       8,
       0,
       9,
       0,
       "VIDEO"
+    ],
+    [
+      11,
+      7,
+      0,
+      10,
+      0,
+      "IMAGE"
+    ],
+    [
+      12,
+      10,
+      0,
+      8,
+      0,
+      "IMAGE"
     ]
   ],
   "groups": [],
@@ -353,8 +346,8 @@
     "ds": {
       "scale": 0.8526983761385988,
       "offset": [
-        2198.136247691975,
-        1166.950213406463
+        2203.9999858436086,
+        1155.2227371031956
       ]
     },
     "frontendVersion": "1.53.6",
