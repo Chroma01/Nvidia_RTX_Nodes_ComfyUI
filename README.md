@@ -10,9 +10,8 @@ This extension provides:
 
 ## Requirements
 
-- An NVIDIA RTX GPU
-- A working ComfyUI installation with CUDA-enabled PyTorch
-- A Python environment supported by the [`nvidia-vfx`](https://pypi.org/project/nvidia-vfx/) package
+- An NVIDIA RTX GPU (DGX and RTX Spark are very well supported).
+- A working ComfyUI installation with CUDA-enabled PyTorch (cu130 or higher pytorch is required).
 
 The nodes use the CUDA device selected by ComfyUI. CPU-only execution and non-NVIDIA GPUs are not supported.
 
