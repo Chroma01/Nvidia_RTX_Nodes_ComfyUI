@@ -108,6 +108,14 @@ Find the node under **image/enhancement**. It converts each SDR input image with
 > [!IMPORTANT]
 > A ComfyUI `IMAGE` does not carry HDR color-space metadata. The values this node outputs are meant for HDR workflows — downstream tools that save the video or image need to mark or encode them with the selected transfer function. If you display or save them as regular SDR data, they won't look the way HDR intends.
 
+### Workflow
+
+Decode a video to an `IMAGE` batch, connect it to **RTX TrueHDR**, then pass `hdr_images` to video creation/encoding or image saving nodes.
+
+![RTX TrueHDR workflow](example_workflows/rtx_video_true_hdr.jpg)
+
+Importable example: [`rtx_video_true_hdr.json`](example_workflows/rtx_video_true_hdr.json)
+
 ## RTX Video Frame Generation
 
 Find the node under **video**. It processes every adjacent pair in an input `IMAGE` batch and returns `interpolated_images`, containing the original frames plus generated intermediate frames.
@@ -132,6 +140,14 @@ At least two input frames are required for interpolation. A one-frame batch is r
 For \(N\) input frames and multiplier \(M\), multiplier mode returns \((N - 1)M + 1\) frames. To preserve the source video's duration, multiply its frame rate by \(M\) when encoding the output.
 
 Specific-timestep mode inserts one generated frame between each pair and returns \(2N - 1\) frames. A timestep of `0.5` creates evenly spaced 2× interpolation. Other timestep values create nonuniform temporal spacing, so use them for selecting frames or with a downstream workflow that can represent custom timestamps.
+
+### Workflow
+
+Decode a video to an `IMAGE` batch, connect it to **RTX Video Frame Generation**, then encode `interpolated_images` at the adjusted frame rate.
+
+![RTX video frame generation workflow](example_workflows/rtx_video_frame_generation.jpg)
+
+Importable example: [`rtx_video_frame_generation.json`](example_workflows/rtx_video_frame_generation.json)
 
 ## Implementation notes
 
