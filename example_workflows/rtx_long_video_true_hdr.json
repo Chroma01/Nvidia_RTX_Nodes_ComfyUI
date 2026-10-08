@@ -1,0 +1,751 @@
+{
+  "id": "e6b92a63-6d7e-4d2b-b9e3-2e054825db02",
+  "revision": 0,
+  "last_node_id": 101,
+  "last_link_id": 293,
+  "nodes": [
+    {
+      "id": 7,
+      "type": "GetVideoComponents",
+      "pos": [
+        -970,
+        -750
+      ],
+      "size": [
+        193.530859375,
+        106
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 24
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            13
+          ]
+        },
+        {
+          "name": "audio",
+          "type": "AUDIO",
+          "links": [
+            32
+          ]
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "links": [
+            31
+          ]
+        },
+        {
+          "name": "bit_depth",
+          "type": "COMBO",
+          "links": []
+        },
+        {
+          "name": "color_space",
+          "type": "COMBO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "GetVideoComponents",
+        "cnr_id": "comfy-core",
+        "ver": "0.16.4",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      }
+    },
+    {
+      "id": 9,
+      "type": "SaveVideo",
+      "pos": [
+        510,
+        -750
+      ],
+      "size": [
+        883.7805232763291,
+        592.9150566101075
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 287
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SaveVideo",
+        "cnr_id": "comfy-core",
+        "ver": "0.16.4",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "video/ComfyUI",
+        "auto",
+        "auto",
+        "auto"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "video/ComfyUI",
+        "format": "auto",
+        "format.codec": "auto",
+        "codec": "auto"
+      }
+    },
+    {
+      "id": 8,
+      "type": "CreateVideo",
+      "pos": [
+        -400,
+        -750
+      ],
+      "size": [
+        270,
+        150
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 29
+        },
+        {
+          "name": "audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": 32
+        },
+        {
+          "name": "fps",
+          "type": "FLOAT",
+          "widget": {
+            "name": "fps"
+          },
+          "link": 31
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            30
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CreateVideo",
+        "cnr_id": "comfy-core",
+        "ver": "0.16.4",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        30,
+        "auto",
+        "HDR",
+        "none"
+      ],
+      "widgets_values_named": {
+        "fps": 30,
+        "bit_depth": "auto",
+        "color_space": "HDR",
+        "codec": "none"
+      }
+    },
+    {
+      "id": 6,
+      "type": "LoadVideo",
+      "pos": [
+        -1725.111483335495,
+        -1317.3499486979842
+      ],
+      "size": [
+        386.798828125,
+        510
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            288
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadVideo",
+        "cnr_id": "comfy-core",
+        "ver": "0.16.4",
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "example.mp4",
+        "image"
+      ],
+      "widgets_values_named": {
+        "file": "example.mp4",
+        "upload": "image"
+      }
+    },
+    {
+      "id": 11,
+      "type": "RTXTrueHDR",
+      "pos": [
+        -710,
+        -750
+      ],
+      "size": [
+        270,
+        178
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 13
+        }
+      ],
+      "outputs": [
+        {
+          "name": "hdr_images",
+          "type": "IMAGE",
+          "links": [
+            29
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "RTXTrueHDR"
+      },
+      "widgets_values": [
+        100,
+        100,
+        50,
+        650,
+        true,
+        "HDR"
+      ],
+      "widgets_values_named": {
+        "contrast": 100,
+        "saturation": 100,
+        "middle_gray": 50,
+        "luminance": 650,
+        "debanding": true,
+        "output_colorspace": "HDR"
+      }
+    },
+    {
+      "id": 13,
+      "type": "StartLoop",
+      "pos": [
+        -1980,
+        -750
+      ],
+      "size": [
+        349.177734375,
+        186
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "parent_iteration",
+          "shape": 7,
+          "type": "INT",
+          "link": null
+        },
+        {
+          "name": "initial_iteration_value",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "iteration_index",
+          "type": "INT",
+          "links": [
+            292
+          ]
+        },
+        {
+          "name": "is_first",
+          "type": "BOOLEAN",
+          "links": null
+        },
+        {
+          "name": "is_last",
+          "type": "BOOLEAN",
+          "links": null
+        },
+        {
+          "name": "list_item",
+          "type": "*",
+          "links": null
+        },
+        {
+          "name": "current_iteration_value",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "StartLoop"
+      },
+      "widgets_values": [
+        "simple",
+        8,
+        false
+      ],
+      "widgets_values_named": {
+        "mode": "simple",
+        "mode.num_iterations": 8,
+        "cache_iterations": false
+      }
+    },
+    {
+      "id": 14,
+      "type": "EndLoop",
+      "pos": [
+        -90,
+        -750
+      ],
+      "size": [
+        270,
+        98
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "output_value",
+          "shape": 7,
+          "type": "*",
+          "link": 30
+        },
+        {
+          "name": "next_iteration_value",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        },
+        {
+          "name": "terminations.termination0",
+          "shape": 7,
+          "type": "*",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "outputs",
+          "shape": 6,
+          "type": "VIDEO",
+          "links": [
+            285
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "EndLoop"
+      },
+      "widgets_values": [
+        true
+      ],
+      "widgets_values_named": {
+        "accumulate": true
+      }
+    },
+    {
+      "id": 17,
+      "type": "VideoTemporalCrop",
+      "pos": [
+        -1280,
+        -750
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "link": 288
+        },
+        {
+          "name": "start_frame",
+          "type": "INT",
+          "widget": {
+            "name": "start_frame"
+          },
+          "link": 293
+        },
+        {
+          "name": "length",
+          "type": "INT",
+          "widget": {
+            "name": "length"
+          },
+          "link": 289
+        }
+      ],
+      "outputs": [
+        {
+          "name": "video",
+          "type": "VIDEO",
+          "links": [
+            24
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VideoTemporalCrop"
+      },
+      "widgets_values": [
+        0,
+        16
+      ],
+      "widgets_values_named": {
+        "start_frame": 0,
+        "length": 16
+      }
+    },
+    {
+      "id": 99,
+      "type": "ConcatenateVideo",
+      "pos": [
+        210,
+        -750
+      ],
+      "size": [
+        270,
+        118
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "videos.video0",
+          "type": "VIDEO",
+          "link": 285
+        },
+        {
+          "name": "videos.video1",
+          "shape": 7,
+          "type": "VIDEO",
+          "link": null
+        },
+        {
+          "name": "complete_audio",
+          "shape": 7,
+          "type": "AUDIO",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "VIDEO",
+          "type": "VIDEO",
+          "links": [
+            287
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ConcatenateVideo"
+      },
+      "widgets_values": [
+        "auto"
+      ],
+      "widgets_values_named": {
+        "codec": "auto"
+      }
+    },
+    {
+      "id": 100,
+      "type": "PrimitiveInt",
+      "pos": [
+        -1910,
+        -440
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            289,
+            291
+          ]
+        }
+      ],
+      "title": "Frames per Chunk",
+      "properties": {
+        "Node name for S&R": "PrimitiveInt"
+      },
+      "widgets_values": [
+        16,
+        "fixed"
+      ],
+      "widgets_values_named": {
+        "value": 16,
+        "control_after_generate": "fixed"
+      }
+    },
+    {
+      "id": 101,
+      "type": "ComfyMathExpression",
+      "pos": [
+        -1590,
+        -750
+      ],
+      "size": [
+        263.1818544387817,
+        148
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "values.a",
+          "type": "FLOAT,INT,BOOLEAN",
+          "link": 292
+        },
+        {
+          "name": "values.b",
+          "shape": 7,
+          "type": "FLOAT,INT,BOOLEAN",
+          "link": 291
+        },
+        {
+          "name": "values.c",
+          "shape": 7,
+          "type": "FLOAT,INT,BOOLEAN",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            293
+          ]
+        },
+        {
+          "name": "BOOL",
+          "type": "BOOLEAN",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ComfyMathExpression"
+      },
+      "widgets_values": [
+        "a * b"
+      ],
+      "widgets_values_named": {
+        "expression": "a * b"
+      }
+    }
+  ],
+  "links": [
+    [
+      13,
+      7,
+      0,
+      11,
+      0,
+      "IMAGE"
+    ],
+    [
+      24,
+      17,
+      0,
+      7,
+      0,
+      "VIDEO"
+    ],
+    [
+      29,
+      11,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      30,
+      8,
+      0,
+      14,
+      0,
+      "VIDEO"
+    ],
+    [
+      31,
+      7,
+      2,
+      8,
+      2,
+      "FLOAT"
+    ],
+    [
+      32,
+      7,
+      1,
+      8,
+      1,
+      "AUDIO"
+    ],
+    [
+      288,
+      6,
+      0,
+      17,
+      0,
+      "VIDEO"
+    ],
+    [
+      289,
+      100,
+      0,
+      17,
+      2,
+      "INT"
+    ],
+    [
+      293,
+      101,
+      1,
+      17,
+      1,
+      "INT"
+    ],
+    [
+      287,
+      99,
+      0,
+      9,
+      0,
+      "VIDEO"
+    ],
+    [
+      285,
+      14,
+      0,
+      99,
+      0,
+      "VIDEO"
+    ],
+    [
+      292,
+      13,
+      0,
+      101,
+      0,
+      "INT"
+    ],
+    [
+      291,
+      100,
+      0,
+      101,
+      1,
+      "INT"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7397561116569382,
+      "offset": [
+        2086.029779007778,
+        1594.935891489984
+      ]
+    },
+    "frontendVersion": "1.57.0",
+    "workflowRendererVersion": "LG",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
