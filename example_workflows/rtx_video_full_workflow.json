@@ -1,8 +1,8 @@
 {
   "id": "e6b92a63-6d7e-4d2b-b9e3-2e054825db02",
   "revision": 0,
-  "last_node_id": 13,
-  "last_link_id": 18,
+  "last_node_id": 14,
+  "last_link_id": 19,
   "nodes": [
     {
       "id": 7,
@@ -140,7 +140,7 @@
         520
       ],
       "flags": {},
-      "order": 8,
+      "order": 9,
       "mode": 0,
       "inputs": [
         {
@@ -379,7 +379,8 @@
           "name": "hdr_images",
           "type": "IMAGE",
           "links": [
-            13
+            13,
+            19
           ]
         }
       ],
@@ -502,6 +503,49 @@
       "widgets_values_named": {
         "expression": "a * b"
       }
+    },
+    {
+      "id": 14,
+      "type": "SaveImageAdvanced",
+      "pos": [
+        240.4369621582041,
+        -97.62800757853134
+      ],
+      "size": [
+        570,
+        177.99994531250002
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 4,
+      "showAdvanced": true,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 19
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": null
+        }
+      ],
+      "properties": {},
+      "widgets_values": [
+        "ComfyUI",
+        "exr",
+        "16-bit float",
+        "HDR"
+      ],
+      "widgets_values_named": {
+        "filename_prefix": "ComfyUI",
+        "format": "exr",
+        "format.bit_depth": "16-bit float",
+        "format.input_color_space": "HDR"
+      }
     }
   ],
   "links": [
@@ -592,6 +636,14 @@
       8,
       2,
       "FLOAT"
+    ],
+    [
+      19,
+      11,
+      0,
+      14,
+      0,
+      "IMAGE"
     ]
   ],
   "groups": [],
@@ -599,10 +651,10 @@
   "extra": {
     "workflowRendererVersion": "LG",
     "ds": {
-      "scale": 0.9090909090909091,
+      "scale": 0.7513148009015777,
       "offset": [
-        1937.166479492187,
-        1246.333408610026
+        2021.2503982543942,
+        1297.9857690226231
       ]
     },
     "frontendVersion": "1.57.0",
