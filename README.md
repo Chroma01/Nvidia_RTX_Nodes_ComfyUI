@@ -116,6 +116,14 @@ Decode a video to an `IMAGE` batch, connect it to **RTX TrueHDR**, then pass `hd
 
 Importable example: [`rtx_video_true_hdr.json`](example_workflows/rtx_video_true_hdr.json)
 
+### Long video workflow
+
+For long videos, process the frames in chunks to limit memory use. The loop crops `Frames per Chunk` frames per iteration with **Video Temporal Crop**, converts them with **RTX TrueHDR**, and joins the results with **Concatenate Video**. Set the loop count to the number of chunks needed to cover the whole video.
+
+![RTX long video TrueHDR workflow](example_workflows/rtx_long_video_true_hdr.jpg)
+
+Importable example: [`rtx_long_video_true_hdr.json`](example_workflows/rtx_long_video_true_hdr.json)
+
 ## RTX Video Frame Generation
 
 Find the node under **video**. It processes every adjacent pair in an input `IMAGE` batch and returns `interpolated_images`, containing the original frames plus generated intermediate frames.
