@@ -1,5 +1,7 @@
 # ComfyUI Nvidia VFX Nodes
 
+> Previously called Nvidia RTX Nodes for ComfyUI
+
 ComfyUI nodes for VFX professionals. This extension provides GPU-accelerated nodes powered by Nvidia RTX technology and its `nvidia-vfx` Python bindings.
 
 Including:
@@ -29,8 +31,8 @@ Clone the repository into `ComfyUI/custom_nodes`, then install its dependency wi
 
 ```bash
 cd ComfyUI/custom_nodes
-git clone https://github.com/Comfy-Org/Nvidia_RTX_Nodes_ComfyUI.git
-cd Nvidia_RTX_Nodes_ComfyUI
+git clone https://github.com/Comfy-Org/ComfyUI_Nvidia_VFX_Nodes.git
+cd ComfyUI_Nvidia_VFX_Nodes
 python -m pip install -r requirements.txt
 ```
 
