@@ -12,10 +12,10 @@ Including:
 
 ## Requirements
 
-- An NVIDIA RTX GPU (DGX and RTX Spark are very well supported).
+- An Nvidia RTX GPU (DGX and RTX Spark are very well supported).
 - A working ComfyUI installation with CUDA-enabled PyTorch (cu130 or higher pytorch is required).
-
-The nodes use the CUDA device selected by ComfyUI. CPU-only execution and non-NVIDIA GPUs are not supported.
+- The nodes use the CUDA device selected by ComfyUI. CPU-only execution and non-NVIDIA GPUs are not supported.
+- RTX Video Frame Generation is supported on Nvidia 40 series and later only.
 
 ## Installation
 
